@@ -12,8 +12,6 @@ import { TranslocoHttpLoader } from './transloco-loader';
       provideTransloco({
         config: {
           availableLangs: ['de', 'en', 'fr'],
-          defaultLang: 'de',
-          // Remove this option if your application doesn't support changing language in runtime.
           reRenderOnLangChange: true,
           prodMode: !isDevMode(),
         },

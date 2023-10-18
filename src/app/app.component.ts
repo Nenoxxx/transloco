@@ -16,8 +16,10 @@ export class AppComponent {
   }
 
   setLanguage(language: string | undefined) {
-    if (language != null) {
+    if (language == 'de' || language == 'en' || language == 'fr') {
       this.translateService.setActiveLang(language);
+    } else {
+      this.translateService.setActiveLang('en');
     }
   }
 }
