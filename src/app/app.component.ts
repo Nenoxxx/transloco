@@ -8,18 +8,16 @@ import { getBrowserLang, TranslocoService } from '@ngneat/transloco';
 })
 export class AppComponent {
   title = 'transloco-tryout';
-  lang: string | undefined = '';
 
   constructor(private translateService: TranslocoService) { }
 
   ngOnInit() {
-    this.lang = getBrowserLang();
-    if (this.lang != null) {
-      this.translateService.setActiveLang(this.lang);
-    }
+    this.setLanguage(getBrowserLang());
   }
 
-  setLanguage(language: string) {
-    this.translateService.setActiveLang(language);
+  setLanguage(language: string | undefined) {
+    if (language != null) {
+      this.translateService.setActiveLang(language);
+    }
   }
 }
