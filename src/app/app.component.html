@@ -1,4 +1,8 @@
-<button (click)="setLanguage('de')">DE</button>
-<button (click)="setLanguage('en')">EN</button>
-<button (click)="setLanguage('fr')">FR</button>
-<h1>{{ 'HELLO' | transloco }}</h1>
+<div class="container">
+  <div class="button-container">
+    <button (click)="setLanguage('de')">DE</button>
+    <button (click)="setLanguage('en')">EN</button>
+    <button (click)="setLanguage('fr')">FR</button>
+  </div>
+  <h1>{{ 'HELLO' | transloco }}</h1>
+</div>
